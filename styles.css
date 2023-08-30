@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, purple 20%, orange 80%);
+}
+main {
+  width: 90%;
+  width: 350px;
+  opacity: 0.35;
+}
+.chosen-container {
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+}
+p {
+  padding-left: 1rem;
+}
+button {
+  border: none;
+  background-color: unset;
+}
+.options {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+.option {
+  cursor: pointer;
+  border: solid pink 1px;
+  margin: 0.5rem 0;
+  transition: padding 0.5s;
+  border-radius: 5px;
+  border: none;
+}
+.option:hover {
+  background-color: rgba(167, 160, 160, 0.461);
+  padding-left: 0.5rem;
+}
+i {
+  margin: 1rem;
+}
+a {
+  text-decoration: none;
+  pointer-events: none;
+  color: black;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.fa-youtube {
+  color: red;
+}
+.fa-twitter,
+.fa-linkedin,
+.fa-facebook {
+  color: blue;
+}
+
+/* animations */
+.rotRight {
+  animation: turnIconRight 0.25s forwards;
+}
+.rotLeft {
+  animation: turnIconLeft 0.25s forwards;
+}
+
+@keyframes turnIconRight {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes turnIconLeft {
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+/* media queries */
+
+@media (width <= 375px) {
+  main {
+    width: 260px;
+  }
+}
